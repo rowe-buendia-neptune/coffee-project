@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<ul id="myUL" class="coffee d-flex">';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<h4>' + coffee.name + '</h4>';
+    html += '<li class="col-2"> <a href="#">' + coffee.name + '</a></li>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -35,7 +35,28 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, p, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+    p = document.getElementsByTagName('p');
 
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            p[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+            p[i].style.display = "none";
+        }
+    }
+}
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
