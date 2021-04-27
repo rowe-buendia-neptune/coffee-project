@@ -12,26 +12,33 @@
 
 
 <div class="jumbotron jumbotron-fluid">
-            <div class="name">
-                <h1 class="display-4">Rowe's Goodday Coffee</h1>
-            </div>
-        </div>
-
-<div class="container w-100 mr-0">
-<form>
-    <h4>Search for Coffee</h4>
-    <label for="roast-selection">Select Roast</label>
-    <select id="roast-selection" class="submit">
-        <option>any</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-<!--    <input id="submit" type="submit" />-->
-</form>
-<br>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <div class="name">
+        <h1 class="display-4 col-7">Rowe's Goodday Coffee</h1>
+    </div>
+    <div class="container col-5">
+        <form>
+            <h4>Search for Coffee</h4>
+            <label for="roast-selection">Select Roast</label>
+            <select id="roast-selection" class="submit">
+                <option>any</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <!--    <input id="submit" type="submit" />-->
+        </form>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <form>
+            <h4>Create a Coffee</h4>
+            <label for="coffee-name">Coffee Name</label>
+            <input type="text" id="coffee-name" placeholder="Coffee Name">
+            <label for="coffee-roast">Coffee Roast</label>
+            <input type="text" id="coffee-roast" placeholder="Coffee Roast">
+            <button type="button" onclick="createCoffee()" >Submit</button>
+        </form>
+    </div>
 </div>
+
 
 <!--<table>-->
 <!--    <thead>-->
@@ -44,8 +51,8 @@
 <!--    <tbody id="coffees"></tbody>-->
 <!--</table>-->
 
-<div class="container w-100 row-col-12 flex-wrap">
-<main id="coffees"></main>
+<div class="container">
+    <main id="coffees"></main>
 </div>
 
 
