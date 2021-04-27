@@ -5,17 +5,24 @@
     <title>Rowe's Goodday Coffee</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/760b59d652.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
+<div class="links">
+    <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+</div>
 
 <div class="jumbotron jumbotron-fluid">
+
     <div class="name">
-        <h1 class="display-4 col-7">Rowe's Goodday Coffee</h1>
+        <h1 class="display-4">Rowe's Goodday Coffee</h1>
     </div>
-    <div class="container col-5">
+    <div class="container">
         <form>
             <h4>Search for Coffee</h4>
             <label for="roast-selection">Select Roast</label>
@@ -27,8 +34,11 @@
             </select>
             <!--    <input id="submit" type="submit" />-->
         </form>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-        <form>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Name...">
+    </div>
+
+    <div class="container">
+        <form class="createStation">
             <h4>Create a Coffee</h4>
             <label for="coffee-name">Coffee Name</label>
             <input type="text" id="coffee-name" placeholder="Coffee Name"><br>
@@ -36,8 +46,8 @@
             <input type="text" id="coffee-roast" placeholder="Coffee Roast">
             <button type="button" id="cCoffee" onclick="createCoffee()" >Submit</button>
         </form>
+        </div>
     </div>
-</div>
 
 
 <!--<table>-->

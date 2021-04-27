@@ -21,15 +21,17 @@ td, th {
 
 .jumbotron {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
+    padding: 35px 0 45px 0;
     background-color: rgba(0, 0, 0, .5);
 }
 
 .container {
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+
 }
 
 #coffees {
@@ -63,9 +65,36 @@ ul>li {
 }
 
 .display-4 {
-    margin: 0 1em;
+    margin: 0 1.5em;
 }
 
 p {
     margin:0;
+}
+
+.fab {
+    margin:2px;
+    padding:2px;
+    color: white;
+}
+.links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0 0 1em;
+
+}
+
+.createStation {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5em 0 0;
+}
+
+button {
+    margin: 15px 0 0 0;
+}
+
+.name {
+    margin: 0 20em 0 0;
 }
