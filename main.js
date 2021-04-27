@@ -64,13 +64,13 @@ function myFunction() {
 
 function createCoffee() {
     var cCoffee = {};
-    coffees.id = coffees.length+1;
-    coffees.name = document.getElementById("coffee-name");
-    coffees.roast = document.getElementById("coffee-roast");
-    coffees.push(cCoffee);
-    console.log(cCoffee);
-    return renderCoffee(coffees)
+    cCoffee.id = (coffees.length + 1);
+    cCoffee.name = (document.getElementById("coffee-name").value);
+    cCoffee.roast = (document.getElementById("coffee-roast").value);
+     coffees.push(cCoffee);
+     console.log(coffees);
 }
+
 
 
 
