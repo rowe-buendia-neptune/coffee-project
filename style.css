@@ -31,6 +31,7 @@ td, th {
     display:flex;
     justify-content: flex-start;
     flex-direction: column;
+    font-size: 25px;
 
 }
 
@@ -61,11 +62,13 @@ ul>li {
     align-items: center;
     margin: 2em;
     padding: 2em;
-    background-color: rgba(0,0,0, .3);
+    background-color: rgba(0,0,0, .5);
 }
 
 .display-4 {
     margin: 0 1.5em;
+    font-weight: bold;
+    font-size: 60px;
 }
 
 p {
@@ -76,6 +79,7 @@ p {
     margin:2px;
     padding:2px;
     color: white;
+    
 }
 .links {
     position: absolute;
@@ -97,4 +101,15 @@ button {
 
 .name {
     margin: 0 20em 0 0;
+}
+
+.searchBar {
+    margin: 1.5em 0 0 0;
+}
+
+.head1 {
+    font-weight: bolder;
+}
+label {
+    font-size: 20px;
 }
