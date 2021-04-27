@@ -69,6 +69,8 @@ function createCoffee() {
     cCoffee.roast = (document.getElementById("coffee-roast").value);
      coffees.push(cCoffee);
      console.log(coffees);
+
+     renderCoffees(coffees);
 }
 
 
