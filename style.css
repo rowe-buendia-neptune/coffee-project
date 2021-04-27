@@ -14,9 +14,11 @@ td, th {
     padding: 5px 10px;
 }
 
+
 #coffees {
     display: flex;
     flex-direction: column;
+    margin-top: 375px;
 }
 
 .jumbotron {
@@ -24,7 +26,11 @@ td, th {
     justify-content: space-between;
     margin: 0;
     padding: 35px 0 45px 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100vw;
 }
 
 .container {
@@ -33,10 +39,6 @@ td, th {
     flex-direction: column;
     font-size: 25px;
 
-}
-
-#coffees {
-    display: flex;
 }
 
 ul{
@@ -63,6 +65,7 @@ ul>li {
     margin: 2em;
     padding: 2em;
     background-color: rgba(0,0,0, .5);
+    z-index: 1;
 }
 
 .display-4 {
@@ -112,4 +115,12 @@ button {
 }
 label {
     font-size: 20px;
+}
+.rearCoffee{
+    font-size: small;
+    width: 300px;
+    opacity: 0;
+}
+.rearCoffee:hover{
+    opacity: 1;
 }
