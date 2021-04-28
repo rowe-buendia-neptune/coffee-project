@@ -1,16 +1,15 @@
 "use strict"
-
+// Render coffee menu
 function renderCoffee(coffee) {
     var html = '<ul id="myUL" class="coffee">';
     html += '<div class=eachCoffee>'
-    // html += '<div>' + coffee.id + '</div>';
     html += '<li><a href="#">' + coffee.name + '</a></li>';
     html += '<p>' + coffee.roast + '</p>';
     html += '<div class="rearCoffee">' + coffee.description + '</div>'
     html += '</div>';
     return html;
 }
-
+// Pulls each coffee from variable
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
@@ -18,7 +17,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+// Roast filter function
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -35,7 +34,7 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// Active Search function
 function myFunction() {
     // Declare variables
     var input, filter, ul, li, a, i, p, eachCoffee, txtValue;
@@ -61,6 +60,8 @@ function myFunction() {
         }
     }
 }
+
+// Create a coffee function
 let updatedList ='';
 function createCoffee() {
     let cCoffee = {};
@@ -69,14 +70,9 @@ function createCoffee() {
     cCoffee.roast = (document.getElementById("coffee-roast").value.trim().toLowerCase());
     coffees.push(cCoffee);
     localStorage.setItem("coffees", JSON.stringify(coffees));
-    // let storedCoffees = localStorage.getItem("coffees");
-    // updatedList = JSON.parse(storedCoffees);
-    // console.log(updatedList);
 
     document.getElementById("coffee-name").value = "";
     document.getElementById("coffee-roast").value = "";
-    // document.getElementById("cCoffee").disabled = true;
-    // tbody.innerHTML = renderCoffees(updatedList);
 }
 
 
@@ -101,15 +97,14 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark', description: 'For those seeking a penetrating, balanced roast with vigorous flavors. Masterfully slow roasted for boldly perfect cups.'},
     {id: 14, name: 'French', roast: 'dark', description: 'Coffee roasted to a full, rich, dark state. Beans roasted to a French roast are very oily and dark. The French Roast tastes stronger, despite having less acid and caffeine than a lighter roasted bean.'},
 ];
-
+// Variables for rendering coffees on page, roast filter on change, unpacking local storage, local storage to array, and updating coffee list
 var tbody = document.querySelector('#coffees');
 var submitChange = document.querySelector('.submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 let storedCoffees = localStorage.getItem("coffees");
-// console.log(storedCoffees);
 updatedList = JSON.parse(storedCoffees);
-// console.log(updatedList);
+
 
 if(updatedList !== "") {
     tbody.innerHTML = renderCoffees(updatedList);

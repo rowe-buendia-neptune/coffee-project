@@ -11,18 +11,18 @@
 
     </head>
     <body>
-
+<!--    Social media links-->
         <div class="links">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
             <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
         </div>
-
+<!--    Top nav bar-->
         <div class="jumbotron jumbotron-fluid">
-
             <div class="name">
                 <h1 class="display-4">Rowe's Goodday Coffee</h1>
             </div>
+<!--            Select roast filter-->
             <div class="container">
                 <form>
                     <h4 class="head1">Search for Coffee</h4>
@@ -33,14 +33,13 @@
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <!--    <input id="submit" type="submit" />-->
                 </form>
-
+<!--                Search a coffee-->
                 <div class="searchBar">
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Name...">
+                    <input type="text" id="myInput" class="p-0 border-white" onkeyup="myFunction()" placeholder="Search Coffee...">
                 </div>
             </div>
-
+<!--            Create a coffee-->
             <div class="container">
                 <form class="createStation">
                     <h4 class="head1">Create a Coffee</h4>
@@ -52,19 +51,7 @@
                 </form>
             </div>
         </div>
-
-
-        <!--<table>-->
-        <!--    <thead>-->
-        <!--    <tr>-->
-        <!--        <th>ID</th>-->
-        <!--        <th>NAME</th>-->
-        <!--        <th>ROAST</th>-->
-        <!--    </tr>-->
-        <!--    </thead>-->
-        <!--    <tbody id="coffees"></tbody>-->
-        <!--</table>-->
-
+<!--        Coffee generator-->
         <div class="container">
             <main id="coffees"></main>
         </div>
