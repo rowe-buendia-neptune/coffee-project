@@ -106,9 +106,9 @@ let storedCoffees = localStorage.getItem("coffees");
 updatedList = JSON.parse(storedCoffees);
 
 
-if(updatedList !== "") {
-    tbody.innerHTML = renderCoffees(updatedList);
-}else{
+if(updatedList === null) {
     tbody.innerHTML = renderCoffees(coffees);
+}else{
+    tbody.innerHTML = renderCoffees(updatedList);
 }
 submitChange.addEventListener('change', updateCoffees);
